@@ -130,35 +130,9 @@ export default function RecursosPage() {
                 </div>
             </section>
 
-            {/* Material pendiente */}
-            <section className="py-20" style={{ background: "#f5f5f0" }}>
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="section-title text-center mb-4">Checklist de contenido para la web</h2>
-                    <p className="section-subtitle text-center mx-auto max-w-xl">
-                        Para que la web tenga &ldquo;piel&rdquo;, conviene reunir este material del equipo:
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-4">
-                        {[
-                            { icon: "📸", label: "10–20 fotos de nodos instalados", desc: "Caja, antenas, PoE, altura, paisaje real." },
-                            { icon: "👥", label: "5–10 fotos de talleres", desc: "Semillero, capacitaciones en territorio." },
-                            { icon: "📱", label: "5 screenshots de LimeApp", desc: "Diagnóstico, actualización firmware, mapa." },
-                            { icon: "🗺️", label: "1 diagrama del stack", desc: "LibreMesh → LibreRouterOS → LimeApp → Comunidad." },
-                            { icon: "📍", label: "1 mapa de red real", desc: "Nodos y enlaces de QuintanaLibre o FOQSI." },
-                            { icon: "📖", label: "3 micro-historias", desc: "Familias conectadas, km de enlace, impacto real." },
-                        ].map((item) => (
-                            <div key={item.label} className="card p-5">
-                                <span className="text-3xl block mb-3">{item.icon}</span>
-                                <h3 className="font-bold text-sm mb-1.5 text-gray-800">{item.label}</h3>
-                                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            <section className="py-16 text-center bg-white">
+                <Link href="/contacto" className="btn-primary">¿Buscás otro recurso? Contactanos</Link>
             </section>
-
-            <div className="py-12 text-center bg-white">
-                <Link href="/contacto" className="btn-primary">¿Tenés material para compartir? Contactanos</Link>
-            </div>
         </div>
     );
 }

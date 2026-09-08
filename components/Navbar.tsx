@@ -55,9 +55,11 @@ export default function Navbar() {
 
                 {/* Mobile menu button */}
                 <button
-                    className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    className="lg:hidden w-11 h-11 inline-flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors"
                     onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Menú"
+                    aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+                    aria-expanded={menuOpen}
+                    aria-controls="menu-movil"
                 >
                     {menuOpen ? (
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -73,7 +75,7 @@ export default function Navbar() {
 
             {/* Mobile menu */}
             {menuOpen && (
-                <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-4">
+                <div id="menu-movil" className="lg:hidden bg-white border-t border-gray-100 px-6 py-4">
                     <ul className="flex flex-col gap-3">
                         {navigation.map((item) => (
                             <li key={item.name}>

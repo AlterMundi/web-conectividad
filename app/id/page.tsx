@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = {
     title: "I+D | AlterMundi",
     description: "Investigación y desarrollo de AlterMundi en redes mesh: testbeds, virtual mesh, APuP, Shared State en Rust (2024-2026).",
@@ -21,7 +19,7 @@ export default function IDPage() {
                         que están cambiando cómo se despliegan las redes comunitarias en el mundo.
                     </p>
                     <div className="terminal max-w-lg">
-                        <span className="terminal-comment"># Proyecto ARDC "New Wi-Fi for mesh networks"</span>{"\n"}
+                        <span className="terminal-comment"># Proyecto ARDC &ldquo;New Wi-Fi for mesh networks&rdquo;</span>{"\n"}
                         <span className="terminal-prompt">$</span> status: <span style={{ color: "#38b000" }}>ACTIVO</span>{"\n"}
                         <span className="terminal-prompt">$</span> APuP:   <span style={{ color: "#38b000" }}>aprobado en OpenWRT ✓</span>{"\n"}
                         <span className="terminal-prompt">$</span> Shared-State: <span style={{ color: "#f4a900" }}>reescrito en Rust</span>{"\n"}

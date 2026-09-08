@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = {
     title: "LibreRouterOS + LimeApp | AlterMundi",
     description: "LibreRouterOS es el SO del LibreRouter basado en LibreMesh/OpenWrt. LimeApp permite diagnosticar y gestionar la red localmente sin internet.",

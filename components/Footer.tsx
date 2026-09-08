@@ -50,7 +50,6 @@ export default function Footer() {
                                 { label: "Formación y Acompañamiento", href: "/formacion" },
                                 { label: "Incidencia Pública", href: "/incidencia" },
                                 { label: "Recursos", href: "/recursos" },
-                                { label: "Blog", href: "/blog" },
                             ].map((l) => (
                                 <li key={l.label}>
                                     <Link href={l.href} className="text-gray-400 hover:text-white text-sm transition-colors">
