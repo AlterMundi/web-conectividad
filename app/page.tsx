@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { posts, timeline, stack, siteInfo, partners, videos } from "@/lib/data";
+import { timeline, stack, siteInfo, partners, videos } from "@/lib/data";
 
 export default function HomePage() {
-  const recentPosts = posts.slice(0, 3);
-
   return (
     <>
       {/* ══════════════════════════════════════════════
@@ -16,7 +14,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="hero-video absolute inset-0 w-full h-full object-cover"
           style={{ zIndex: 0 }}
         >
           <source src="/images/hero/hero-comunidad-techos-01.mp4" type="video/mp4" />
@@ -43,12 +41,13 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 max-w-4xl" style={{ zIndex: 3 }}>
           {/* Text */}
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-white mb-6">
-              Hacemos{" "}
-              <span className="gradient-celeste">Internet</span>
-              <br />
-              con las{" "}
-              <span className="gradient-verde">comunidades.</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-white mb-6">
+              <span className="block">
+                Hacemos <span className="gradient-celeste">Internet</span>
+              </span>
+              <span className="block">
+                con las <span className="gradient-verde">comunidades.</span>
+              </span>
             </h1>
 
             <div className="flex flex-wrap gap-4 mt-8">
@@ -93,7 +92,7 @@ export default function HomePage() {
             <h2 className="section-title">El stack completo</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {stack.map((item, i) => (
               <Link href={item.link} key={item.id} className="card p-6 group">
                 <div className="flex items-center justify-between mb-4">
@@ -156,7 +155,7 @@ export default function HomePage() {
                 <span className="terminal-comment"># AlterMundi opera infraestructura real</span>{"\n"}
                 <span className="terminal-prompt">$</span> whois AS264607{"\n"}
                 <span style={{ color: "#f4a900" }}>ASN: AS264607</span>{"\n"}
-                <span className="terminal-comment"># Registro LACNIC — "Vinimos a cambiar internet"</span>{"\n"}
+                <span className="terminal-comment"># Registro LACNIC — &ldquo;Vinimos a cambiar internet&rdquo;</span>{"\n"}
                 <span className="terminal-prompt">$</span> ping altermundi.net → OK ✓
               </div>
               <Link href="/id" className="btn-primary">
@@ -250,41 +249,6 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          POSTS RECIENTES
-      ══════════════════════════════════════════════ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <h2 className="section-title mb-1">Últimas novedades</h2>
-            </div>
-            <Link href="/blog" className="btn-secondary hidden md:inline-flex text-sm">
-              Ver todo →
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {recentPosts.map((post) => (
-              <Link href={`/blog/${post.slug}`} key={post.slug} className="card p-6 group flex flex-col">
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {post.tags.slice(0, 2).map((t) => (
-                    <span key={t} className="tag">{t}</span>
-                  ))}
-                </div>
-                <h3 className="post-title font-bold text-base text-gray-900 leading-snug mb-3 line-clamp-3">
-                  {post.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 line-clamp-2">{post.excerpt}</p>
-                <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-100">
-                  <span className="text-gray-400 text-xs">{post.dateDisplay}</span>
-                  <span className="text-sm font-bold group-hover:translate-x-1 transition-transform inline-block" style={{ color: "#00b4d8" }}>Leer →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════
           PARTNERS / ALIANZAS
       ══════════════════════════════════════════════ */}
       <section className="py-20" style={{ background: "#f5f5f0" }}>
@@ -326,7 +290,7 @@ export default function HomePage() {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6" /></svg>
                   </div>
                 </h2>
-                <p className="text-gray-400 text-sm mt-2 font-medium">Click para expandir el timeline histórico completo</p>
+                <p className="text-gray-400 text-sm mt-2 font-medium">Activá para expandir la historia completa</p>
               </div>
             </summary>
 

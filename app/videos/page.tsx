@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { videos } from "@/lib/data";
 
 export const metadata = {
@@ -14,12 +13,12 @@ for (const v of videos) {
 
 // Semillero 2022 playlist items (manually curated from the post)
 const semilleroVideos = [
-    { title: "Introducción: ¿qué son las redes comunitarias?", ytId: "placeholder-1", desc: "Marco teórico del Semillero 2022" },
-    { title: "Soberanía tecnológica y gobernanza comunitaria", ytId: "placeholder-2", desc: "Organización y toma de decisiones" },
-    { title: "LibreRouter: instalación y primeros pasos", ytId: "placeholder-3", desc: "Taller técnico de configuración" },
-    { title: "Financiamiento: Programa Roberto Arias (ENACOM)", ytId: "placeholder-4", desc: "Cómo postularse y qué cubre" },
-    { title: "Testimonios: redes de 9 provincias", ytId: "placeholder-5", desc: "Voces de las 16 comunidades participantes" },
-    { title: "LimeApp: diagnóstico y administración local", ytId: "placeholder-6", desc: "Cómo gestionar tu red sin internet" },
+    { title: "Introducción: ¿qué son las redes comunitarias?", desc: "Marco teórico del Semillero 2022" },
+    { title: "Soberanía tecnológica y gobernanza comunitaria", desc: "Organización y toma de decisiones" },
+    { title: "LibreRouter: instalación y primeros pasos", desc: "Taller técnico de configuración" },
+    { title: "Financiamiento: Programa Roberto Arias (ENACOM)", desc: "Cómo postularse y qué cubre" },
+    { title: "Testimonios: redes de 9 provincias", desc: "Voces de las 16 comunidades participantes" },
+    { title: "LimeApp: diagnóstico y administración local", desc: "Cómo gestionar tu red sin internet" },
 ];
 
 export default function VideosPage() {
@@ -175,16 +174,8 @@ export default function VideosPage() {
                         
                         <h2 className="section-title">Más videos</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="max-w-3xl">
                         {[
-                            {
-                                title: "LibreRouter, the router of community networks",
-                                desc: "Charla técnica 2019: el diseño del LibreRouter, motivaciones y aprendizajes del proceso. Presentada en Freifunk.",
-                                ytId: "XHXNkiTJFME",
-                                year: "2019",
-                                color: "#a855f7",
-                                label: "Charla técnica · Freifunk",
-                            },
                             {
                                 title: "Redes de Internet Comunitarias para organizaciones rurales",
                                 desc: "Conversatorio 2021: cómo las organizaciones rurales pueden crear y sostener sus propias redes.",

@@ -31,7 +31,6 @@ altermundi/
 │   ├── formacion/            # Semillero, FOQSI, talleres
 │   ├── videos/               # Documentales y tutoriales
 │   ├── recursos/             # Repos, documentación, prensa
-│   ├── blog/                 # Novedades
 │   └── contacto/             # Contacto
 ├── components/
 │   ├── Navbar.tsx            # Navegación principal con dropdowns
@@ -59,7 +58,8 @@ Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 ```bash
 # Build de producción
 npm run build
-npm start
+
+# La exportación estática queda en out/
 
 # Linter
 npm run lint
@@ -84,6 +84,8 @@ npm run lint
 | `/videos` | Galería de documentales y tutoriales YouTube |
 | `/recursos` | Documentación, repos, prensa |
 | `/contacto` | Formulario y datos de contacto |
+
+El sitio no publica un blog. Las novedades se mantienen en los canales oficiales de AlterMundi.
 
 ### Datos centralizados (`lib/data.ts`)
 

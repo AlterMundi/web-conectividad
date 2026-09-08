@@ -297,16 +297,6 @@ export const videos = [
     category: "Conversatorio",
     color: "#f4a900",
   },
-  {
-    id: "librerouter-freifunk",
-    title: "LibreRouter, the router of community networks",
-    desc: "Charla técnica sobre LibreRouter: diseño, motivación y aprendizajes. Presentada en Freifunk 2019.",
-    ytId: "XHXNkiTJFME",
-    thumb: `https://img.youtube.com/vi/XHXNkiTJFME/hqdefault.jpg`,
-    year: "2019",
-    category: "Charla técnica",
-    color: "#a855f7",
-  },
 ];
 
 // ── CARC (Cumbre Argentina de Redes Comunitarias) ──
